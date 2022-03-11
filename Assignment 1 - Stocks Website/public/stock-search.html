@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Stock Search Page</title>
+    </head>
+    <body>
+        <!-- This displays the title and a field set with radio buttons for the user to choose the highest or lowest price as a search -->
+        <header>
+            <h1>Search for a stock</h1>
+        </header>
+        <form action="/stocks-result" method="POST">
+            <fieldset>
+                <!--The legend displays lets us know about the selection-->
+                <legend>
+                    Search for the stock based on highest or lowest price
+                </legend>
+                <!--two radio buttons that save the value (highest / lowest) in pricehoice (name) and sends with it is submitted-->
+                <p>
+                    <label for="highest">
+                        <input type="radio" name="pricechoice" id="highest" value="highest" required="required">
+                    </label><strong>Highest</strong>
+                    <label for="Lowest">
+                        <input type="radio" name="pricechoice" id="lowest" value="lowest" required="required">
+                    </label><strong>Lowest</strong>
+                <!--button to submit search-->
+                <p>
+                    <button type="submit">Submit Order</button>
+                </p>
+            </fieldset>
+        </form>
+        <nav>
+            <ul>
+                <!-- use links to go to all pages including the homepage-->
+                <li><a href="./stock-listings.html">Stock Order</a></li>
+                <li><a href="./stock-search.html">Stock Search</a></li>
+                <li><a href="./index.html">Homepage</a></li>
+            </ul>
+        </nav> 
+    </body>
+</html>
