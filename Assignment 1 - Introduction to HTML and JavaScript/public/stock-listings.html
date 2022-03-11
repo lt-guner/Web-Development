@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <!--metadata and title along with a link to style.css for table colors-->
+        <title>Stock Listings</title>
+        <link href="./style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <!--Heading of the page-->
+        <header><h1>Stock Listings</h1></header>
+
+        <!--Table that shows the company name, ticker, and price-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Company</th>
+                    <th>Stock</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Splunk</td>
+                    <td>SPLK</td>
+                    <td>137.55</td>
+                </tr>
+                <tr>
+                    <td>Microsoft</td>
+                    <td>MSFT</td>
+                    <td>232.04</td>
+                </tr>
+                <tr>
+                    <td>Oracle</td>
+                    <td>ORCL</td>
+                    <td>67.08</td>
+                </tr>
+                <tr>
+                    <td>Snowflake</td>
+                    <td>SNOW</td>
+                    <td>235.8</td>
+                </tr>
+                <tr>
+                    <td>Terradata</td>
+                    <td>TDC</td>
+                    <td>44.98</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+
+        <!--This is a form to capture the order data-->
+        <form action="/stocks-ordered" method="POST">
+            <fieldset>
+                <legend>
+                    <strong>Stock Purchase</strong>
+                </legend>
+                <!--Setup a radio selection to choose stock-->
+                <p>
+                    <strong>Choose a stock:</strong>
+                    <label for="SPLK">
+                        <input type="radio" name="stockticker" id="SPLK" value="SPLK" required="required">
+                    </label>Splunk
+                    <label for="MSFT">
+                        <input type="radio" name="stockticker" id="MSFT" value="MSFT" required="required">
+                    </label>Microsoft
+                    <label for="ORCL">
+                        <input type="radio" name="stockticker" id="ORCL" value="ORCL" required="required">
+                    </label>Oracle
+                    <label for="SNOW">
+                        <input type="radio" name="stockticker" id="SNOW" value="SNOW" required="required">
+                    </label>Snowflake
+                    <label for="TDC">
+                        <input type="radio" name="stockticker" id="TDC" value="TDC" required="required">
+                    </label>Terradata
+                </p>
+                <!--have a text box to enter quantity-->
+                <p>
+                    <strong>Enter quantity:</strong>
+                    <input type="text" name="stockquantity" size="10" maxlength="10" required="required">
+                </p>
+                <!--Setup a submit button to place order-->
+                <button type="submit">Submit Order</button>
+            </fieldset>
+            <nav>
+                <ul>
+                    <!-- use links to go to all pages including the homepage-->
+                    <li><a href="./stock-listings.html">Stock Order</a></li>
+                    <li><a href="./stock-search.html">Stock Search</a></li>
+                    <li><a href="./index.html">Homepage</a></li>
+                </ul>
+            </nav>       
+        </form>
+    </body>
+</html>
