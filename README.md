@@ -1,1 +1,1 @@
-# OSU-CS290-Summer-2022
+# OSU CS290 Summer 2022
